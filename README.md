@@ -245,7 +245,7 @@ function Greeting() {
     </>
   )
 }
-```
+```                                                                            
 
 #### Nest Components
 
@@ -643,24 +643,7 @@ const Book = (props) => {
 ```
 
 ```js
-function BookList() {
-  return (
-    <section className='booklist'>
-      <Book author={author} title={title} img={img} />
-      <Book title={title} img={img} />
-    </section>
-  )
-}
-const Book = (props) => {
-  console.log(props)
-  return (
-    <article className='book'>
-      <img src={props.img} alt={props.title} />
-      <h2>{props.title}</h2>
-      <h4>{props.author} </h4>
-    </article>
-  )
-}
+c
 ```
 
 #### Props - Somewhat Dynamic Setup
@@ -832,6 +815,114 @@ const Book = (props) => {
 - [Javascript Nuggets - Map ](https://www.youtube.com/watch?v=80KX6aD9R7M&list=PLnHJACx3NwAfRUcuKaYhZ6T5NRIpzgNGJ&index=1)
 
 - refactor
+
+<!-- Here are some simple list approaches in React components:
+
+1. Mapping an Array
+
+Use the map() method to render a list of items from an array.
+
+
+jsx
+const items = ['Item 1', 'Item 2', 'Item 3'];
+
+function SimpleList() {
+  return (
+    <ul>
+      {items.map((item, index) => (
+        <li key={index}>{item}</li>
+      ))}
+    </ul>
+  );
+}
+
+
+2. Using JSX Expressions
+
+Use JSX expressions to render a list of items.
+
+
+jsx
+const items = ['Item 1', 'Item 2', 'Item 3'];
+
+function SimpleList() {
+  return (
+    <ul>
+      {items.map((item, index) => (
+        <li key={index}>{item}</li>
+      ))}
+    </ul>
+  );
+}
+
+
+3. Rendering a List of Objects
+
+Render a list of objects using the map() method.
+
+
+jsx
+const items = [
+  { id: 1, name: 'Item 1' },
+  { id: 2, name: 'Item 2' },
+  { id: 3, name: 'Item 3' },
+];
+
+function SimpleList() {
+  return (
+    <ul>
+      {items.map((item) => (
+        <li key={item.id}>{item.name}</li>
+      ))}
+    </ul>
+  );
+}
+
+
+4. *Using the key Prop*
+
+Use the key prop to assign a unique key to each list item.
+
+
+jsx
+const items = ['Item 1', 'Item 2', 'Item 3'];
+
+function SimpleList() {
+  return (
+    <ul>
+      {items.map((item, index) => (
+        <li key={index}>{item}</li>
+      ))}
+    </ul>
+  );
+}
+
+
+5. Rendering a List with Conditional Statements
+
+Render a list with conditional statements using the map() method.
+
+
+jsx
+const items = [
+  { id: 1, name: 'Item 1', active: true },
+  { id: 2, name: 'Item 2', active: false },
+  { id: 3, name: 'Item 3', active: true },
+];
+
+function SimpleList() {
+  return (
+    <ul>
+      {items.map((item) => (
+        <li key={item.id} style={{ color: item.active ? 'green' : 'red' }}>
+          {item.name}
+        </li>
+      ))}
+    </ul>
+}
+
+
+These simple list approaches will help you render lists in your React components.  -->
 
 ```js
 const books = [
